@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace AppBancoDigital
+namespace AppBancoDigital.View
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class Menu : ContentPage
+    public partial class Login : ContentPage
     {
-        public Menu()
+        public Login()
         {
             InitializeComponent();
         }
