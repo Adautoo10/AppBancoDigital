@@ -1,12 +1,63 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="AppBancoDigital.View.Login">
-    <ContentPage.Content>
+             x:Class="AppBancoDigital.View.Login"
+             BackgroundColor="#696969"
+             Title="Tela de Login">
+
+    <ContentPage.Background>
+        <LinearGradientBrush StartPoint="1" EndPoint="0,2">
+            <GradientStop Color="#00FA9A" Offset="0.4" />
+            <GradientStop Color="Black" Offset="0.6" />
+        </LinearGradientBrush>
+    </ContentPage.Background>
+
+    <Grid>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+
+            <Image Source="Login.png"></Image>
+            
+                 
+                <StackLayout Padding="80" VerticalOptions="Start" HorizontalOptions="Center">
+
+                <Frame BackgroundColor="Transparent" Margin="5" BorderColor="#00FA9A">
+
+
+                    <Label Text="NEXTBANK" FontSize="Title" TextColor="#00FA9A" FontAttributes="Bold" />
+                    
+                </Frame>
+  
+               
+                
+            </StackLayout>
+
+            <StackLayout VerticalOptions="Center">
+                <Frame BackgroundColor="Transparent" Margin="10" BorderColor="#00FA9A">
+                    <StackLayout>
+                        <Label Text="E-mail:" FontSize="Body" TextColor="White" HorizontalOptions="Start" />
+                        <Entry x:Name="txt_email" Keyboard="Email" ReturnType="Next" ClearButtonVisibility="WhileEditing" TextColor="White" />
+
+                        <Label Text="Senha:" FontSize="Body" TextColor="White" HorizontalOptions="Start" />
+                        <Entry x:Name="txt_senha" Keyboard="Default" ReturnType="Done" IsPassword="True" ClearButtonVisibility="WhileEditing" TextColor="White" />
+                    </StackLayout>
+                </Frame>
+
+                <Button x:Name="btn_logar" Text="ENTRAR" BackgroundColor="#228B22" TextColor="#fff"
+                        CornerRadius="30" HorizontalOptions="Center" />
+
+                <Button x:Name="btn_criar" Text="Não possui uma conta? Criar uma conta."
+                        
+                        FontAttributes="Italic" TextTransform="None"
+                        
+                        BackgroundColor="Transparent" TextColor="White"
+                        
+                        CornerRadius="20" HorizontalOptions="Center"
+                        
+                        Clicked="btn_criar_Clicked"/>
+
+            </StackLayout>
+
         </StackLayout>
-    </ContentPage.Content>
+    </Grid>
+
 </ContentPage>
