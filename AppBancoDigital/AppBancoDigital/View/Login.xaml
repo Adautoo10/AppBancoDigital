@@ -48,15 +48,16 @@
 
                 <Label Text="Não possui uma conta?" HorizontalOptions="CenterAndExpand" TextColor="Black" Margin="20"/>
 
+                
                 <Button x:Name="btn_criar" Text="CRIAR UMA" 
-                        
-                        
-                               
+                                                 
                         FontAttributes="Bold" TextTransform="None"
                         
                         BackgroundColor="Transparent" TextColor="Black"
                         
                         CornerRadius="20" HorizontalOptions="Center"
+                        
+                        Margin="8"
                                         
                         Clicked="btn_criar_Clicked"/>
 
