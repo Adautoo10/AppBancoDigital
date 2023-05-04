@@ -36,19 +36,20 @@
                 <Frame BackgroundColor="Transparent" Margin="8" BorderColor="#00FA9A">
                     <StackLayout>
                         <Label Text="E-mail:" FontSize="Body" TextColor="Black" HorizontalOptions="Start" />
-                        <Entry x:Name="txt_email" Keyboard="Email" ReturnType="Next" ClearButtonVisibility="WhileEditing" TextColor="White" />
+                        <Entry x:Name="txt_email" Keyboard="Email" ReturnType="Next" ClearButtonVisibility="WhileEditing" TextColor="Black" />
 
                         <Label Text="Senha:" FontSize="Body" TextColor="Black" HorizontalOptions="Start" />
-                        <Entry x:Name="txt_senha" Keyboard="Default" ReturnType="Done" IsPassword="True" ClearButtonVisibility="WhileEditing" TextColor="White" />
+                        <Entry x:Name="txt_senha" Keyboard="Default" ReturnType="Done" IsPassword="True" ClearButtonVisibility="WhileEditing" TextColor="Black" />
                     </StackLayout>
                 </Frame>
 
                 <Button x:Name="btn_logar" Text="ENTRAR" BackgroundColor="#00FA9A" TextColor="#000"
-                        CornerRadius="30" HorizontalOptions="Center" />
+                        CornerRadius="20" HorizontalOptions="Center" Clicked="btn_logar_Clicked_1" />
 
                 <Label Text="Não possui uma conta?" HorizontalOptions="CenterAndExpand" TextColor="Black" Margin="20"/>
 
                 <Button x:Name="btn_criar" Text="CRIAR UMA" 
+                        
                         
                                
                         FontAttributes="Bold" TextTransform="None"
@@ -56,7 +57,7 @@
                         BackgroundColor="Transparent" TextColor="Black"
                         
                         CornerRadius="20" HorizontalOptions="Center"
-                        
+                                        
                         Clicked="btn_criar_Clicked"/>
 
             </StackLayout>
