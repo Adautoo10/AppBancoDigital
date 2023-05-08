@@ -8,7 +8,7 @@
     <ContentPage.Background>
         <LinearGradientBrush StartPoint="0,1" EndPoint="1,0">
             <GradientStop Color="Gray" Offset="0.3" />
-            <GradientStop Color="#00FA9A" Offset="1.3" />
+            <GradientStop Color="#0fba74" Offset="1.3" />
             
         </LinearGradientBrush>
     </ContentPage.Background>
@@ -16,10 +16,10 @@
     <Grid>
         <StackLayout>
 
-            <Image Source="Login.png"></Image>
-            
-                 
-                <StackLayout Padding="80" VerticalOptions="Start" HorizontalOptions="Center">
+          
+
+
+            <StackLayout Padding="80" VerticalOptions="Start" HorizontalOptions="Center">
 
                 <Frame BackgroundColor="#00FA9A" Margin="5" BorderColor="Black">
 
@@ -35,8 +35,8 @@
             <StackLayout VerticalOptions="Center">
                 <Frame BackgroundColor="Transparent" Margin="8" BorderColor="#00FA9A">
                     <StackLayout>
-                        <Label Text="E-mail:" FontSize="Body" TextColor="Black" HorizontalOptions="Start" />
-                        <Entry x:Name="txt_email" Keyboard="Email" ReturnType="Next" ClearButtonVisibility="WhileEditing" TextColor="Black" />
+                        <Label Text="CPF:" FontSize="Body" TextColor="Black" HorizontalOptions="Start" />
+                        <Entry x:Name="txt_CPF" Keyboard="Numeric" ReturnType="Next" ClearButtonVisibility="WhileEditing" TextColor="Black"  />
 
                         <Label Text="Senha:" FontSize="Body" TextColor="Black" HorizontalOptions="Start" />
                         <Entry x:Name="txt_senha" Keyboard="Default" ReturnType="Done" IsPassword="True" ClearButtonVisibility="WhileEditing" TextColor="Black" />
@@ -49,17 +49,8 @@
                 <Label Text="Não possui uma conta?" HorizontalOptions="CenterAndExpand" TextColor="Black" Margin="20"/>
 
                 
-                <Button x:Name="btn_criar" Text="CRIAR UMA" 
-                                                 
-                        FontAttributes="Bold" TextTransform="None"
-                        
-                        BackgroundColor="Transparent" TextColor="Black"
-                        
-                        CornerRadius="20" HorizontalOptions="Center"
-                        
-                        Margin="8"
-                                        
-                        Clicked="btn_criar_Clicked"/>
+                <Button x:Name="btn_criar" Text="CRIAR UMA" FontAttributes="Bold" TextTransform="None" BackgroundColor="Transparent" TextColor="Black"
+                CornerRadius="20" HorizontalOptions="Center" Margin="8" Clicked="btn_criar_Clicked"/>
 
             </StackLayout>
 

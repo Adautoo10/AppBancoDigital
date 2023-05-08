@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppBancoDigital.View.Conta"
+             Title="CONTA">
+
+
+    <ContentPage.Background>
+        <LinearGradientBrush StartPoint="0,1" EndPoint="1,0">
+            <GradientStop Color="Gray" Offset="0.3" />
+            <GradientStop Color="#00FA9A" Offset="1.3" />
+
+        </LinearGradientBrush>
+    </ContentPage.Background>
+
+
+    <Grid>
+
+        <StackLayout>
+
+            <ActivityIndicator x:Name="act_carregando" IsVisible="False" IsRunning="False" />
+
+            <StackLayout Padding="50" VerticalOptions="Start" HorizontalOptions="Center"/>
+
+            <Frame BackgroundColor="#00FA9A" Margin="3" BorderColor="Black" >
+                <Label Text="CONTA" FontSize="Title" TextColor="#000" FontAttributes="Bold" HorizontalOptions="Center" />
+            </Frame>
+
+        </StackLayout>
+
+
+        <StackLayout VerticalOptions="Center">
+
+            <Frame BackgroundColor="Transparent" Margin="8" BorderColor="#00FA9A">
+                <StackLayout >
+                    <Label Text="Nome" FontSize="Body" TextColor="#000" HorizontalOptions="Start" FontAttributes="Bold" />
+                    <Entry x:Name="txt_nome" TextColor="#fff" />
+
+                    <Label Text="CPF" FontSize="Body" TextColor="#000" HorizontalOptions="Start" FontAttributes="Bold" />
+                    <Entry x:Name="txt_cpf" IsPassword="True" TextColor="#fff" />
+
+                    <Label Text="Senha" FontSize="Body" TextColor="#000" HorizontalOptions="Start" FontAttributes="Bold" />
+                    <Entry x:Name="txt_senha" IsPassword="True" TextColor="#fff"  />
+
+                </StackLayout>
+            </Frame>
+
+            <Button x:Name="btn_Voltar" Text="Voltar" BackgroundColor="#000" TextColor="White"
+                        CornerRadius="20" HorizontalOptions="Center"   Clicked="btn_Voltar_Clicked" />
+
+        </StackLayout>
+    </Grid>
+
+</ContentPage>
