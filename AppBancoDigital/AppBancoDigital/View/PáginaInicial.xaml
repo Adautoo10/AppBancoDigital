@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppBancoDigital.View.PáginaInicial"
+             Title="INICIO">
+
+    <ContentPage.Background>
+        <LinearGradientBrush StartPoint="0,3" EndPoint="1,0">
+            <GradientStop Color="#40E0D0" Offset="0.4" />
+            <GradientStop Color="#4F4F4F" Offset="1.0" />
+
+        </LinearGradientBrush>
+    </ContentPage.Background>
+
+    <Grid>
+        <StackLayout>
+
+
+
+
+            <StackLayout Padding="80" VerticalOptions="Start" HorizontalOptions="Center">
+
+
+                <Image x:Name="Logo" Scale="2" Margin="8"/>
+
+
+            </StackLayout>
+
+            <StackLayout VerticalOptions="Center">
+                <Frame BackgroundColor="Transparent" Margin="5" BorderColor="Black" >
+                    <StackLayout>
+                            
+
+                        <Label Text="BEM VINDO" FontSize="50"  FontAttributes="Bold" TextColor="#40E0D0" HorizontalOptions="Center" VerticalOptions="Center"/>
+
+                        
+
+                    </StackLayout>
+
+                </Frame>
+
+                <Label Text=""/>
+                <Label Text=""/>
+                <Label Text=""/>
+                <Label Text=""/>
+                <Label Text=""/>
+                <Label Text=""/>
+
+                <StackLayout>
+                   
+                        <Label Text="ACESSE A PÁGINA DE LOGIN" FontSize="20"  FontAttributes="Bold" TextColor="#40E0D0" HorizontalOptions="Center" VerticalOptions="Center"/>
+                   
+                </StackLayout>
+
+                <Label Text=""/>
+                
+            
+
+                <Button x:Name="btn_logar" Text="ENTRAR" BackgroundColor="#40E0D0" TextColor="Black"
+                        CornerRadius="20" HorizontalOptions="Center" Clicked="btn_logar_Clicked" />
+
+            </StackLayout>
+
+        </StackLayout>
+    </Grid>
+
+</ContentPage>
