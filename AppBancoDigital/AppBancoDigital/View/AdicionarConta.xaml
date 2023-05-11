@@ -30,23 +30,26 @@
 
             <Frame BackgroundColor="Transparent" Margin="8" BorderColor="#40E0D0">
                     <StackLayout >
-                        <Label Text="Nome" FontSize="Body" TextColor="#000" HorizontalOptions="Start" FontAttributes="Bold" />
+                        <Label Text="NOME:" FontSize="Body" TextColor="#000" HorizontalOptions="Start" FontAttributes="Bold" />
                         <Entry x:Name="txt_nome" TextColor="#fff" />
 
-                        <Label Text="CPF" FontSize="Body" TextColor="#000" HorizontalOptions="Start" FontAttributes="Bold" />
+                        <Label Text="CPF:" FontSize="Body" TextColor="#000" HorizontalOptions="Start" FontAttributes="Bold" />
                         <Entry x:Name="txt_cpf" IsPassword="True" TextColor="#fff" />
 
-                        <Label Text="Senha" FontSize="Body" TextColor="#000" HorizontalOptions="Start" FontAttributes="Bold" />
+                        <Label Text="SENHA:" FontSize="Body" TextColor="#000" HorizontalOptions="Start" FontAttributes="Bold" />
                         <Entry x:Name="txt_senha" IsPassword="True" TextColor="#fff"  />
                         
                     </StackLayout>
                 </Frame>
 
+           
+      
+            <Button x:Name="btn_cadastrar" Text="Cadastrar" BackgroundColor="#40E0D0" TextColor="Black"
+                        CornerRadius="20" HorizontalOptions="Center" Margin="10"  Clicked="btn_cadastrar_Clicked" />
 
-            <Button x:Name="btn_cadastrar" Text="Cadastrar" BackgroundColor="#000" TextColor="White"
-                        CornerRadius="20" HorizontalOptions="Center"  Clicked="btn_cadastrar_Clicked" />
-
-            <Button x:Name="btn_voltar" Text="Voltar" BackgroundColor="#000" TextColor="White"
+         
+                
+            <Button x:Name="btn_voltar" Text="Voltar" BackgroundColor="#40E0D0" TextColor="Black"
                         CornerRadius="20" HorizontalOptions="Center"   Clicked="btn_voltar_Clicked" />
 
         </StackLayout>
