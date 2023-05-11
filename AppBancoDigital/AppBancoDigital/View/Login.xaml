@@ -2,13 +2,13 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AppBancoDigital.View.Login"
-             BackgroundColor="#696969"
+             xmlns:control="clr-namespace:Xamarin.Forms.MaskedEntry;assembly=Xamarin.Forms.MaskedEntry" xmlns:local="clr-namespace:AppBancoDigital"
              Title="Tela de Login">
     
     <ContentPage.Background>
-        <LinearGradientBrush StartPoint="0,1" EndPoint="1,0">
-            <GradientStop Color="Gray" Offset="0.3" />
-            <GradientStop Color="#0fba74" Offset="1.3" />
+        <LinearGradientBrush StartPoint="0,3" EndPoint="1,0">
+            <GradientStop Color="#40E0D0" Offset="0.4" />
+            <GradientStop Color="#4F4F4F" Offset="1.0" />
             
         </LinearGradientBrush>
     </ContentPage.Background>
@@ -21,35 +21,34 @@
 
             <StackLayout Padding="80" VerticalOptions="Start" HorizontalOptions="Center">
 
-                <Frame BackgroundColor="#00FA9A" Margin="5" BorderColor="Black">
+
+                <Image x:Name="Logo" Scale="2"/>
 
 
-                    <Label Text="NEXTBANK" FontSize="Title" TextColor="Black" FontAttributes="Bold" />
-                    
-                </Frame>
-  
-               
-                
             </StackLayout>
 
             <StackLayout VerticalOptions="Center">
-                <Frame BackgroundColor="Transparent" Margin="8" BorderColor="#00FA9A">
+                <Frame BackgroundColor="Transparent" Margin="8" BorderColor="#40E0D0">
                     <StackLayout>
-                        <Label Text="CPF:" FontSize="Body" TextColor="Black" HorizontalOptions="Start" />
-                        <Entry x:Name="txt_CPF" Keyboard="Numeric" ReturnType="Next" ClearButtonVisibility="WhileEditing" TextColor="Black"  />
+                        <Label Text="CPF:" FontSize="Body" TextColor="Black"/>
+                        <control:MaskedEntry x:Name="txt_cpf" TextColor="Black" Keyboard="Numeric" FontAttributes="Bold"
+                                           Mask="XXX.XXX.XXX-XX"/>
 
-                        <Label Text="Senha:" FontSize="Body" TextColor="Black" HorizontalOptions="Start" />
+                        <Label Text="SENHA:" FontSize="Body" TextColor="Black" HorizontalOptions="Start" />
                         <Entry x:Name="txt_senha" Keyboard="Default" ReturnType="Done" IsPassword="True" ClearButtonVisibility="WhileEditing" TextColor="Black" />
                     </StackLayout>
                 </Frame>
 
-                <Button x:Name="btn_logar" Text="ENTRAR" BackgroundColor="#00FA9A" TextColor="#000"
+                <Label Text=""/>
+                <Label Text=""/>
+
+                <Button x:Name="btn_logar" Text="ENTRAR" BackgroundColor="#40E0D0" TextColor="Black"
                         CornerRadius="20" HorizontalOptions="Center" Clicked="btn_logar_Clicked_1" />
 
                 <Label Text="Não possui uma conta?" HorizontalOptions="CenterAndExpand" TextColor="Black" Margin="20"/>
 
-                
-                <Button x:Name="btn_criar" Text="CRIAR UMA" FontAttributes="Bold" TextTransform="None" BackgroundColor="Transparent" TextColor="Black"
+
+                <Button x:Name="btn_criar" Text="CRIAR UMA" FontAttributes="Bold" TextTransform="None" BackgroundColor="#40E0D0" TextColor="Black"
                 CornerRadius="20" HorizontalOptions="Center" Margin="8" Clicked="btn_criar_Clicked"/>
 
             </StackLayout>

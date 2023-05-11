@@ -6,32 +6,29 @@
 
 
         <ContentPage.Background>
-            <LinearGradientBrush StartPoint="0,1" EndPoint="1,0">
-                <GradientStop Color="Gray" Offset="0.3" />
-                <GradientStop Color="#00FA9A" Offset="1.3" />
-
+        <LinearGradientBrush StartPoint="0,3" EndPoint="1,0">
+            <GradientStop Color="#40E0D0" Offset="0.4" />
+            <GradientStop Color="#4F4F4F" Offset="1.0" />
             </LinearGradientBrush>
-        </ContentPage.Background>
+            
+    </ContentPage.Background>
 
 
         <Grid>
 
             <StackLayout>
 
-                <ActivityIndicator x:Name="act_carregando" IsVisible="False" IsRunning="False" />
+            <Label Text=""/>
+            <Label Text=""/>
 
-                <StackLayout Padding="50" VerticalOptions="Start" HorizontalOptions="Center"/>
+            <Image x:Name="logo" Scale="2"/>
 
-            <Frame BackgroundColor="#00FA9A" Margin="3" BorderColor="Black" >
-                <Label Text="CADASTRO DO CORRENTISTA" FontSize="Title" TextColor="#000" FontAttributes="Bold" HorizontalOptions="Center" />
-            </Frame>
-                
         </StackLayout>
 
 
             <StackLayout VerticalOptions="Center">
 
-            <Frame BackgroundColor="Transparent" Margin="8" BorderColor="#00FA9A">
+            <Frame BackgroundColor="Transparent" Margin="8" BorderColor="#40E0D0">
                     <StackLayout >
                         <Label Text="Nome" FontSize="Body" TextColor="#000" HorizontalOptions="Start" FontAttributes="Bold" />
                         <Entry x:Name="txt_nome" TextColor="#fff" />

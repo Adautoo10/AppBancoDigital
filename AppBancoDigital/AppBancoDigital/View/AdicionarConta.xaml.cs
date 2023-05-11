@@ -1,4 +1,4 @@
-﻿using System;
+﻿ using System;
 using AppBancoDigital.Model;
 using AppBancoDigital.Service;
 using System.Collections.Generic;
@@ -19,6 +19,8 @@ namespace AppBancoDigital.View
 
             InitializeComponent();                      
             NavigationPage.SetHasNavigationBar(this, false);
+
+            logo.Source = ImageSource.FromResource("AppBancoDigital.Imagens.logo.png");
         }
 
         private async void ToolbarItem_Clicked(object sender, EventArgs e)
@@ -44,8 +46,7 @@ namespace AppBancoDigital.View
             }
             finally
             {
-                act_carregando.IsRunning = false;
-                act_carregando.IsVisible = false;
+             
             }
         }
 
