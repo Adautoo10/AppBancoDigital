@@ -2,6 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AppBancoDigital.View.AdicionarConta"
+              xmlns:control="clr-namespace:Xamarin.Forms.MaskedEntry;assembly=Xamarin.Forms.MaskedEntry" xmlns:local="clr-namespace:AppBancoDigital"
              Title="Cadastro">
 
 
@@ -24,22 +25,38 @@
             <Image x:Name="logo" Scale="2"/>
 
         </StackLayout>
+      
+        <StackLayout VerticalOptions="Center">
+
+            <Label Text=""/>
+            <Label Text=""/>
+            <Label Text=""/>
+            <Label Text=""/>
+            <Label Text=""/>
 
 
-            <StackLayout VerticalOptions="Center">
+
 
             <Frame BackgroundColor="Transparent" Margin="8" BorderColor="#40E0D0">
                     <StackLayout >
-                        <Label Text="NOME:" FontSize="Body" TextColor="#000" HorizontalOptions="Start" FontAttributes="Bold" />
-                        <Entry x:Name="txt_nome" TextColor="#fff" />
+                        <Label Text="NOME COMPLETO:" FontSize="Body" TextColor="#000" HorizontalOptions="Start" FontAttributes="Bold" />
+                        <Entry x:Name="txt_nome" TextColor="Black" />
 
-                        <Label Text="CPF:" FontSize="Body" TextColor="#000" HorizontalOptions="Start" FontAttributes="Bold" />
-                        <Entry x:Name="txt_cpf" IsPassword="True" TextColor="#fff" />
+                    <Label Text="CPF:" FontSize="Body" TextColor="Black" FontAttributes="Bold"/>
+                    <control:MaskedEntry x:Name="txt_cpf" TextColor="Black" Keyboard="Numeric" FontAttributes="Bold"
+                                           Mask="XXX.XXX.XXX-XX"/>
 
-                        <Label Text="SENHA:" FontSize="Body" TextColor="#000" HorizontalOptions="Start" FontAttributes="Bold" />
-                        <Entry x:Name="txt_senha" IsPassword="True" TextColor="#fff"  />
-                        
-                    </StackLayout>
+                    <Label Text="DATA DE NASCIMENTO:" FontSize="Body" TextColor="#000" HorizontalOptions="Start" FontAttributes="Bold" />
+                    <DatePicker x:Name="dtpck_ckeckout"
+                                            Format="dd/MM/yyyy" />
+
+                    <Label Text="SENHA:" FontSize="Body" TextColor="#000" HorizontalOptions="Start" FontAttributes="Bold" />
+                        <Entry x:Name="txt_senha" IsPassword="True" TextColor="Black"  />
+
+                   
+                  
+
+                </StackLayout>
                 </Frame>
 
            

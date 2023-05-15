@@ -45,13 +45,6 @@
                 <Label Text=""/>
                 <Label Text=""/>
                 <Label Text=""/>
-
-                <StackLayout>
-                   
-                        <Label Text="ACESSE A PÁGINA DE LOGIN" FontSize="20"  FontAttributes="Bold" TextColor="#40E0D0" HorizontalOptions="Center" VerticalOptions="Center"/>
-                   
-                </StackLayout>
-
                 <Label Text=""/>
                 
             

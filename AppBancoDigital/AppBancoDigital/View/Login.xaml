@@ -30,11 +30,11 @@
             <StackLayout VerticalOptions="Center">
                 <Frame BackgroundColor="Transparent" Margin="8" BorderColor="#40E0D0">
                     <StackLayout>
-                        <Label Text="CPF:" FontSize="Body" TextColor="Black"/>
+                        <Label Text="CPF:" FontSize="Body" TextColor="Black" FontAttributes="Bold"/>
                         <control:MaskedEntry x:Name="txt_cpf" TextColor="Black" Keyboard="Numeric" FontAttributes="Bold"
                                            Mask="XXX.XXX.XXX-XX"/>
 
-                        <Label Text="SENHA:" FontSize="Body" TextColor="Black" HorizontalOptions="Start" />
+                        <Label Text="SENHA:" FontSize="Body" TextColor="Black" HorizontalOptions="Start" FontAttributes="Bold" />
                         <Entry x:Name="txt_senha" Keyboard="Default" ReturnType="Done" IsPassword="True" ClearButtonVisibility="WhileEditing" TextColor="Black" />
                     </StackLayout>
                 </Frame>

@@ -28,32 +28,24 @@
             <Label Text=""/>
 
             <Image x:Name="logo" Scale="2"/>
-            
+
         </StackLayout>
 
 
         <StackLayout VerticalOptions="Center">
+            <Frame BackgroundColor="Transparent" Margin="5" BorderColor="Black" >
 
-            <Frame BackgroundColor="Transparent" Margin="8" BorderColor="#40E0D0">
-                <StackLayout >
-                    <Label Text="Nome:" FontSize="Body" TextColor="Black" HorizontalOptions="Start" FontAttributes="Bold" />
-                    <Entry x:Name="txt_nome" TextColor="#fff" />
+                <StackLayout>
 
-                    <Label Text="CPF:" FontSize="Body" TextColor="Black" HorizontalOptions="Start" FontAttributes="Bold" />
-                    <Entry x:Name="txt_cpf" IsPassword="True" TextColor="#fff" />
 
-                    <Label Text="Senha:" FontSize="Body" TextColor="Black" HorizontalOptions="Start" FontAttributes="Bold" />
-                    <Entry x:Name="txt_senha" IsPassword="True" TextColor="#fff"  />
+                    <Label Text="CONTA BANCÁRIA" FontSize="40"  FontAttributes="Bold" TextColor="#40E0D0" HorizontalOptions="Center" VerticalOptions="Center"/>
+
+
 
                 </StackLayout>
+
+
             </Frame>
-
-            <Label Text=""/>
-            <Label Text=""/>
-            <Button x:Name="btn_Voltar" Text="Voltar" BackgroundColor="#40E0D0" TextColor="White"
-                        CornerRadius="20" HorizontalOptions="Center"   Clicked="btn_Voltar_Clicked" />
-
         </StackLayout>
     </Grid>
-
 </ContentPage>
