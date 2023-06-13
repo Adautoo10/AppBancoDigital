@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AppBancoDigital.Service;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -31,16 +32,27 @@ namespace AppBancoDigital.View
         private async void btn_logar_Clicked_1(object sender, EventArgs e)
         {
             try
+            {
+                Model.Correntista c = await DataServiceCorrentista.LoginAsync(new Model.Correntista
                 {
-                    await Navigation.PushAsync(new Conta());
+                    CPF = txt_cpf.Text,
+                    Senha = txt_senha.Text,
+                });
+
+                if (c.Id != null)
+                {
+                    App.DadosCorrentista = c;
+                    App.Current.MainPage = new NavigationPage(new View.Conta());
+                    
                 }
-              
-           
+                else
+                    throw new Exception("Dados de login inválidos.");
+
+            }
             catch (Exception ex)
             {
-                await DisplayAlert("Ops, ocorreu um erro...", ex.Message, "OK");
+                await DisplayAlert("Ops!", ex.Message, "OK");
             }
-
         }
     }
 }

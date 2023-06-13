@@ -23,47 +23,38 @@ namespace AppBancoDigital.View
             logo.Source = ImageSource.FromResource("AppBancoDigital.Imagens.logo.png");
         }
 
-        private async void ToolbarItem_Clicked(object sender, EventArgs e)
-        {      
-            try
-            {
-                Correntista co = await DataServiceCorrentista.Cadastro(new Correntista
-                {
-                    Nome = txt_nome.Text,
-                    CPF = Convert.ToInt32(txt_cpf.Text),         
-                    Senha = txt_senha.Text
-                });
-
-                string msg = $"Correntista inserido com sucesso. Código gerado: {co.Id} ";
-
-                await DisplayAlert("Sucesso!", msg, "OK");
-
-                await Navigation.PushAsync(new Listar());
-            }
-            catch (Exception ex)
-            {
-                await DisplayAlert("Ops", ex.Message, "OK");
-            }
-            finally
-            {
-             
-            }
-        }
-
 
         private async void btn_cadastrar_Clicked(object sender, EventArgs e)
         {
             try
             {
-                await Navigation.PushAsync(new Conta());
-            }
+                Model.Correntista c = await DataServiceCorrentista.SaveAsync(new Model.Correntista
+                {
+                    Nome = txt_nome.Text,                 
+                    Data_Nascimento = dtpck_ckeckout.Date,
+                    CPF = txt_cpf.Text,
+                    Senha = txt_senha.Text,
+                });
 
+                if (c.Id != null)
+                {
+                   
+                    App.DadosCorrentista = c;
+
+                  
+                    await Navigation.PushAsync(new View.Login());
+                }
+                else
+                    throw new Exception("Ocorreu um erro ao salvar seu cadastro.");
+            }
             catch (Exception ex)
             {
-                await DisplayAlert("Ops, ocorreu um erro...", ex.Message, "OK");
+                Console.WriteLine(ex.StackTrace);
+                await DisplayAlert("Ops!", ex.Message, "OK");
             }
-
         }
+
+    
 
         private async void btn_voltar_Clicked(object sender, EventArgs e)
         {

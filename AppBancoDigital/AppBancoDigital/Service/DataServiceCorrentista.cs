@@ -9,26 +9,33 @@ namespace AppBancoDigital.Service
 {
     public class DataServiceCorrentista : DataService
     {
-        public static async Task<List<Correntista>> GetCorrentistasAsync()
-        {
-            string json = await DataService.GetDataFromService("/correntista");
+          
+            public static async Task<Correntista> LoginAsync(Correntista c)
+            {
+                var json_a_enviar = JsonConvert.SerializeObject(c);
 
-            List<Correntista> arr_corretistas = JsonConvert.DeserializeObject<List<Correntista>>(json);
+                Console.WriteLine("__________________________________________________________________");
+                Console.WriteLine("DADOS QUE FORAM DIGITADOS PELO USUÁRIOS E JÁ CONVERTIDOS EM JSON: ");
+                Console.WriteLine(json_a_enviar);
+                Console.WriteLine("__________________________________________________________________");
 
-            return arr_corretistas;
-        }
+                string json = await DataService.PostDataToService(json_a_enviar, "/correntista/entrar");
 
+                return JsonConvert.DeserializeObject<Correntista>(json);
+            }
 
-        public static async Task<Correntista> Cadastro(Correntista c)
-        {
-            var json_a_enviar = JsonConvert.SerializeObject(c);
+            public static async Task<Correntista> SaveAsync(Correntista c)
+            {
+                var json_a_enviar = JsonConvert.SerializeObject(c);
 
-            string json = await DataService.PostDataToService(json_a_enviar, "/correntista/salvar");
+                Console.WriteLine("__________________________________________________________________");
+                Console.WriteLine("DADOS QUE FORAM DIGITADOS PELO USUÁRIOS E JÁ CONVERTIDOS EM JSON: ");
+                Console.WriteLine(json_a_enviar);
+                Console.WriteLine("__________________________________________________________________");
 
-            Correntista co = JsonConvert.DeserializeObject<Correntista>(json);
+                string json = await DataService.PostDataToService(json_a_enviar, "/correntista/salvar");
 
-            return co;
+                return JsonConvert.DeserializeObject<Correntista>(json);
+            }
         }
     }
-}
-

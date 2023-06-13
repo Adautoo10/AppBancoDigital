@@ -28,6 +28,10 @@ namespace AppBancoDigital.Service
             {
                 HttpResponseMessage response = await client.GetAsync(uri);
 
+                Console.WriteLine("_______________________________");
+                Console.WriteLine(response.Content.ReadAsStringAsync().Result);
+                Console.WriteLine("_______________________________");
+
                 if (response.IsSuccessStatusCode)
                 {
                     json_response = response.Content.ReadAsStringAsync().Result;
@@ -57,6 +61,10 @@ namespace AppBancoDigital.Service
                     new StringContent(json_object, Encoding.UTF8, "application/json")
                 );
 
+                Console.WriteLine("_______________________________");
+                Console.WriteLine(response.Content.ReadAsStringAsync().Result);
+                Console.WriteLine("_______________________________");
+
                 if (response.IsSuccessStatusCode)
                 {
                     json_response = response.Content.ReadAsStringAsync().Result;
@@ -70,13 +78,12 @@ namespace AppBancoDigital.Service
 
         private static string DecodeServerError(System.Net.HttpStatusCode status_code)
         {
-
             string msg_erro;
 
             switch (status_code)
             {
                 case System.Net.HttpStatusCode.BadRequest:
-                    msg_erro = "A requisição não pode ser atendida. Tente mais tarde.";
+                    msg_erro = "A requisição não pode ser atendida agora. Tente mais tarde.";
                     break;
 
                 case System.Net.HttpStatusCode.NotFound:
@@ -101,6 +108,7 @@ namespace AppBancoDigital.Service
             }
 
             return msg_erro;
+
         }
     }
 }
