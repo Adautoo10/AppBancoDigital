@@ -46,6 +46,9 @@
                     <control:MaskedEntry x:Name="txt_cpf" TextColor="Black" Keyboard="Numeric" FontAttributes="Bold"
                                            Mask="XXX.XXX.XXX-XX"/>
 
+                    <Label Text="EMAIL:" FontSize="Body" TextColor="#000" HorizontalOptions="Start" FontAttributes="Bold" />
+                    <Entry x:Name="txt_email" TextColor="Black" />
+
                     <Label Text="DATA DE NASCIMENTO:" FontSize="Body" TextColor="#000" HorizontalOptions="Start" FontAttributes="Bold" />
                     <DatePicker x:Name="dtpck_ckeckout"
                                             Format="dd/MM/yyyy" />

@@ -26,15 +26,18 @@ namespace AppBancoDigital.View
 
         private async void btn_cadastrar_Clicked(object sender, EventArgs e)
         {
+            string[] cpf_pontuado = txt_cpf.Text.Split('.', '-');
+            string cpf_digitado = cpf_pontuado[0] + cpf_pontuado[1] + cpf_pontuado[2] + cpf_pontuado[3];
             try
             {
                 Model.Correntista c = await DataServiceCorrentista.SaveAsync(new Model.Correntista
                 {
-                    Nome = txt_nome.Text,                 
+                    Nome = txt_nome.Text,
                     Data_Nascimento = dtpck_ckeckout.Date,
-                    CPF = txt_cpf.Text,
+                    Email = txt_email.Text,
+                    CPF = cpf_digitado,
                     Senha = txt_senha.Text,
-                });
+                }) ;
 
                 if (c.Id != null)
                 {

@@ -31,11 +31,14 @@ namespace AppBancoDigital.View
 
         private async void btn_logar_Clicked_1(object sender, EventArgs e)
         {
+            string[] cpf_pontuado = txt_cpf.Text.Split('.', '-');
+            string cpf_digitado = cpf_pontuado[0] + cpf_pontuado[1] + cpf_pontuado[2] + cpf_pontuado[3];
+
             try
             {
                 Model.Correntista c = await DataServiceCorrentista.LoginAsync(new Model.Correntista
                 {
-                    CPF = txt_cpf.Text,
+                    CPF = cpf_digitado,
                     Senha = txt_senha.Text,
                 });
 
