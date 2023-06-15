@@ -35,7 +35,7 @@ namespace AppBancoDigital.View
                     Nome = txt_nome.Text,
                     Data_Nascimento = dtpck_ckeckout.Date,
                     Email = txt_email.Text,
-                    CPF = cpf_digitado,
+                    Cpf = cpf_digitado,
                     Senha = txt_senha.Text,
                 }) ;
 
