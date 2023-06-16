@@ -35,5 +35,10 @@ namespace AppBancoDigital.View
                 await DisplayAlert("Ops, ocorreu um erro...", ex.Message, "OK");
             }
         }
+
+        private void btn_sair_Clicked(object sender, EventArgs e)
+        {
+            App.Current.MainPage = new NavigationPage(new View.Login());
+        }
     }
 }

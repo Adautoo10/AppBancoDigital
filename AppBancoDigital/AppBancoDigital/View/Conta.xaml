@@ -41,9 +41,12 @@
 
                     <Label Text="CONTA BANCÁRIA" FontSize="40"  FontAttributes="Bold" TextColor="#40E0D0" HorizontalOptions="Center" VerticalOptions="Center"/>
 
-
+                    <Button x:Name="btn_sair" Text="SAIR" FontAttributes="Bold" TextTransform="None" BackgroundColor="#40E0D0" TextColor="Black"
+                CornerRadius="20" HorizontalOptions="Center" Margin="8" Clicked="btn_sair_Clicked"/>
 
                 </StackLayout>
+
+             
 
 
             </Frame>
