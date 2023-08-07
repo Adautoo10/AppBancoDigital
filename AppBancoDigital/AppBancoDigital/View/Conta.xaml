@@ -12,18 +12,10 @@
         </LinearGradientBrush>
     </ContentPage.Background>
 
-
     <Grid>
 
         <StackLayout>
 
-            <!-- <ActivityIndicator x:Name="act_carregando" IsVisible="False" IsRunning="False" />
-
-            <StackLayout Padding="50" VerticalOptions="Start" HorizontalOptions="Center"/>
-
-            <Frame BackgroundColor="#00FA9A" Margin="3" BorderColor="Black" >
-                <Label Text="CONTA" FontSize="Title" TextColor="#000" FontAttributes="Bold" HorizontalOptions="Center" />
-            </Frame> -->
             <Label Text=""/>
             <Label Text=""/>
 
@@ -38,9 +30,29 @@
 
                 <StackLayout>
 
-
                     <Label Text="CONTA BANCÁRIA" FontSize="40"  FontAttributes="Bold" TextColor="#40E0D0" HorizontalOptions="Center" VerticalOptions="Center"/>
 
+
+                    <Label x:Name="txt_correntista" />
+                    <Label>
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <FormattedString.Spans>
+                                    <Span Text="SEU SALDO BANCÁRIO: " TextColor="Black" FontSize="18" FontAttributes="Bold" />
+                                    <Span Text="R$ 1.000,00 " TextColor="White" FontSize="18" FontAttributes="Bold" />
+                                </FormattedString.Spans>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+
+                    <Label Text="ÁREA DO PIX" FontSize="40" FontAttributes="Bold" TextColor="#40E0D0" HorizontalOptions="Center" VerticalOptions="Center" />
+
+
+
+                    <Button Text="Receber Pix" Clicked="Button_Clicked_Fazer_Pix" />
+                    
+                    <Button Text="Fazer Pix" Clicked="Button_Clicked_Receber_Pix" />
+                    
                     <Button x:Name="btn_sair" Text="SAIR" FontAttributes="Bold" TextTransform="None" BackgroundColor="#40E0D0" TextColor="Black"
                 CornerRadius="20" HorizontalOptions="Center" Margin="8" Clicked="btn_sair_Clicked"/>
 
