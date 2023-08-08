@@ -39,7 +39,7 @@
                             <FormattedString>
                                 <FormattedString.Spans>
                                     <Span Text="SEU SALDO BANCÁRIO: " TextColor="Black" FontSize="18" FontAttributes="Bold" />
-                                    <Span Text="R$ 1.000,00 " TextColor="White" FontSize="18" FontAttributes="Bold" />
+                                    <Span Text="R$ 455.645,00 " TextColor="White" FontSize="18" FontAttributes="Bold" />
                                 </FormattedString.Spans>
                             </FormattedString>
                         </Label.FormattedText>
