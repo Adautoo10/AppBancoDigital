@@ -11,6 +11,8 @@
             <GradientStop Color="#4F4F4F" Offset="1.0" />
         </LinearGradientBrush>
     </ContentPage.Background>
+    
+
 
     <Grid>
 
@@ -21,9 +23,10 @@
 
             <Image x:Name="logo" Scale="2"/>
 
+    
+
         </StackLayout>
-
-
+ 
 
         <StackLayout VerticalOptions="Center">
             <Frame BackgroundColor="Transparent" Margin="5" BorderColor="Black" >
@@ -38,27 +41,26 @@
                         <Label.FormattedText>
                             <FormattedString>
                                 <FormattedString.Spans>
-                                    <Span Text="SEU SALDO BANCÁRIO: " TextColor="Black" FontSize="18" FontAttributes="Bold" />
-                                    <Span Text="R$ 455.645,00 " TextColor="White" FontSize="18" FontAttributes="Bold" />
+                                    <Span Text="SALDO CONTA: " TextColor="Black" FontSize="18" FontAttributes="Bold" />
+                                    <Span Text="R$ 4.500.350,00 " TextColor="White" FontSize="18" FontAttributes="Bold" />
                                 </FormattedString.Spans>
                             </FormattedString>
                         </Label.FormattedText>
                     </Label>
 
                     <Label Text="ÁREA DO PIX" FontSize="40" FontAttributes="Bold" TextColor="#40E0D0" HorizontalOptions="Center" VerticalOptions="Center" />
+      
+
+                    <Button Text="RECEBER PIX" Clicked="Button_Clicked_Fazer_Pix" FontAttributes="Bold" TextTransform="None" BackgroundColor="#40E0D0" TextColor="Black" CornerRadius="20" HorizontalOptions="Center" Margin="8"/>
 
 
+                    <Button Text="FAZER PIX" Clicked="Button_Clicked_Receber_Pix"  FontAttributes="Bold" TextTransform="None" BackgroundColor="#40E0D0" TextColor="Black" CornerRadius="20" HorizontalOptions="Center" Margin="8"/>
 
-                    <Button Text="Receber Pix" Clicked="Button_Clicked_Fazer_Pix" />
-                    
-                    <Button Text="Fazer Pix" Clicked="Button_Clicked_Receber_Pix" />
-                    
+
                     <Button x:Name="btn_sair" Text="SAIR" FontAttributes="Bold" TextTransform="None" BackgroundColor="#40E0D0" TextColor="Black"
                 CornerRadius="20" HorizontalOptions="Center" Margin="8" Clicked="btn_sair_Clicked"/>
 
                 </StackLayout>
-
-             
 
 
             </Frame>
