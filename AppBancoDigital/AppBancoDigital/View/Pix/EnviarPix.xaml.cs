@@ -21,7 +21,7 @@ namespace AppBancoDigital.View.Pix
 
         private void Button_Clicked(object sender, EventArgs e)
         {
-            string teste = "Chave da Transferência: tiago@tiago.blog.br ";
+            string teste = "Chave da Transferência: Adauto.005 ";
 
             QRCodeGenerator qrGenerator = new QRCodeGenerator();
             QRCodeData qrCodeData = qrGenerator.CreateQrCode(teste, QRCodeGenerator.ECCLevel.Q);
