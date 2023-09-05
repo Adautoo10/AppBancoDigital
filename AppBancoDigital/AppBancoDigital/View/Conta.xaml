@@ -21,8 +21,12 @@
 
             <StackLayout Grid.Row="0" BackgroundColor="Black" Padding="20" Spacing="20">
 
+
                 <StackLayout Orientation="Horizontal">
+                     
                     <ImageButton HeightRequest="50" WidthRequest="50" BackgroundColor="White" CornerRadius="50" Source="https://cdn-icons-png.flaticon.com/512/1077/1077114.png" Padding="10" HorizontalOptions="StartAndExpand"/>
+
+                    <Label x:Name="lbl_nome"  VerticalTextAlignment="Center" HorizontalTextAlignment="Center" TextColor="#FFFFFF" FontSize="15"/>
 
                     <ImageButton HeightRequest="50" WidthRequest="50" BackgroundColor="White" CornerRadius="50" Source="https://cdn-icons-png.flaticon.com/512/1611/1611154.png" Padding="10" />
 
@@ -30,8 +34,7 @@
 
                     <ImageButton HeightRequest="50" WidthRequest="50" BackgroundColor="White" CornerRadius="50" Source="https://static.vecteezy.com/system/resources/previews/020/009/601/original/email-and-mail-icon-black-free-png.png" Padding="10" />
                 </StackLayout>
-
-
+                            
 
             </StackLayout>
 
