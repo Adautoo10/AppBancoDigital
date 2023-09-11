@@ -40,8 +40,8 @@
 
             <StackLayout Grid.Row="1" Padding="20" Spacing="20">
                 <Label Text="Saldo da Conta" TextColor="black" FontSize="20" FontAttributes="Bold" />
-                <Label Text="R$ 1.543.360,00" TextColor="black" FontSize="24" Margin="0, -20, 0, 0" FontAttributes="Bold" />
-
+                <Label Text="R$ 1.543.360,00" TextColor="black" FontSize="24" Margin="0, -20, 0, 0" FontAttributes="Bold"  />
+             
                 <ScrollView Orientation="Horizontal">
 
                     <StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand" Padding="5">
@@ -54,6 +54,11 @@
                         <StackLayout>
                             <ImageButton HorizontalOptions="CenterAndExpand" Source="https://cdn.icon-icons.com/icons2/3245/PNG/512/pix_icon_198027.png" CornerRadius="50" BackgroundColor="#f0f1f5" Padding="20" HeightRequest="72" WidthRequest="72" Clicked="Button_Clicked_Fazer_Pix"/>
                             <Label Text="Receber Pix" FontSize="12" FontAttributes="Bold" TextColor="black" HorizontalOptions="Center"/>
+                        </StackLayout>
+
+                        <StackLayout>
+                            <ImageButton HorizontalOptions="CenterAndExpand" Source="https://cdn-icons-png.flaticon.com/512/2746/2746077.png" CornerRadius="50" BackgroundColor="#f0f1f5" Padding="20" HeightRequest="72" WidthRequest="72" />
+                            <Label Text="Poupança" FontSize="12" FontAttributes="Bold" TextColor="black" HorizontalOptions="Center"/>
                         </StackLayout>
 
                         <StackLayout>

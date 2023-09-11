@@ -54,5 +54,10 @@ namespace AppBancoDigital.View
         {
             Navigation.PushAsync(new View.Pix.ReceberPix());
         }
+
+        private void btnolho_Clicked(object sender, EventArgs e)
+        {
+
+        }
     }
 }
