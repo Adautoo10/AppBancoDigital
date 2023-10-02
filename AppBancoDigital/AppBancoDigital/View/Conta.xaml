@@ -40,7 +40,7 @@
 
             <StackLayout Grid.Row="1" Padding="20" Spacing="20">
                 <Label Text="Saldo da Conta" TextColor="black" FontSize="20" FontAttributes="Bold" />
-                <Label Text="R$ 1.543.360,00" TextColor="black" FontSize="24" Margin="0, -20, 0, 0" FontAttributes="Bold"  />
+                <Label Text="R$ 0,00" TextColor="black" FontSize="24" Margin="0, -20, 0, 0" FontAttributes="Bold"  />
              
                 <ScrollView Orientation="Horizontal">
 
