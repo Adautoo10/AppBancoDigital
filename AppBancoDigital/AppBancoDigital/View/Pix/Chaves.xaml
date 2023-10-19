@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppBancoDigital.View.Pix.Chaves">
+
+    <ContentPage.Background>
+        <LinearGradientBrush StartPoint="0,3" EndPoint="1,0">
+            <GradientStop Color="#40E0D0" Offset="0.4" />
+            <GradientStop Color="#4F4F4F" Offset="1.0" />
+        </LinearGradientBrush>
+    </ContentPage.Background>
+
+    <StackLayout>
+        <StackLayout Orientation="Horizontal">
+
+            <ImageButton HeightRequest="50" WidthRequest="50" BackgroundColor="White" CornerRadius="50" Source="https://cdn-icons-png.flaticon.com/512/1077/1077114.png" Padding="10" HorizontalOptions="StartAndExpand"/>
+
+            <Label Text="MINHAS CHAVES" HorizontalOptions="StartAndExpand" VerticalOptions="Center" TextColor="Black" FontAttributes="Bold" FontSize="20"/>
+
+            <ImageButton HeightRequest="50" WidthRequest="50" BackgroundColor="White" CornerRadius="50" Source="https://cdn-icons-png.flaticon.com/512/1611/1611154.png" Padding="10" BorderColor="Black" />
+
+            <ImageButton HeightRequest="50" WidthRequest="50" BackgroundColor="White" CornerRadius="50" Source="https://static.vecteezy.com/system/resources/previews/020/009/601/original/email-and-mail-icon-black-free-png.png" Padding="10" />
+        </StackLayout>
+
+        <Frame CornerRadius="10"
+           x:Name="CHAVE_CPF" VerticalOptions="Center" BackgroundColor="Transparent" BorderColor="Black" Margin="20">
+
+            <Label Text="Chave Pix CPF:
+                                 123.456.789-10" TextColor="White"/>
+        </Frame>
+
+        <Frame CornerRadius="10" x:Name="registrar" VerticalOptions="Center" BackgroundColor="Transparent" BorderColor="Black" Margin="20">
+            <StackLayout>
+                <Label Text="Registrar Chaves" FontSize="Body" TextColor="White" HorizontalOptions="Start" />
+
+                <Entry x:Name="txt_registrar" Keyboard="Default" TextColor="White" ReturnType="Next" ClearButtonVisibility="WhileEditing"/>
+                
+                <Button Text="REGISTRAR" TextColor="Black" BackgroundColor="Transparent" WidthRequest="20" HeightRequest="20" Clicked="Button_Clicked"/>
+                
+            </StackLayout>
+
+        </Frame>
+        
+        <StackLayout>
+            <ImageButton HorizontalOptions="CenterAndExpand" Source="https://cdn-icons-png.flaticon.com/512/1828/1828427.png" CornerRadius="50" BackgroundColor="#f0f1f5" Padding="20" HeightRequest="72" WidthRequest="72" Clicked="ImageButton_Clicked" />
+            <Label Text="Voltar" FontSize="12" FontAttributes="Bold" TextColor="Black" HorizontalOptions="Center"/>
+        </StackLayout>
+
+
+    </StackLayout>
+</ContentPage>

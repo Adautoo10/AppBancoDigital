@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using AppBancoDigital.View.Pix;
 
 namespace AppBancoDigital.View
 {
@@ -58,6 +59,11 @@ namespace AppBancoDigital.View
         private void btnolho_Clicked(object sender, EventArgs e)
         {
 
+        }
+
+        private async void ImageButton_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new View.Pix.Chaves());
         }
     }
 }
