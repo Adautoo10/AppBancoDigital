@@ -11,11 +11,11 @@
     </ContentPage.Background>
 
     <StackLayout>
-        <StackLayout Orientation="Horizontal">
+        <StackLayout  Grid.Row="0" BackgroundColor="Black" Padding="20" Spacing="20" Orientation="Horizontal">
 
             <ImageButton HeightRequest="50" WidthRequest="50" BackgroundColor="White" CornerRadius="50" Source="https://cdn-icons-png.flaticon.com/512/1077/1077114.png" Padding="10" HorizontalOptions="StartAndExpand"/>
 
-            <Label Text="MINHAS CHAVES" HorizontalOptions="StartAndExpand" VerticalOptions="Center" TextColor="Black" FontAttributes="Bold" FontSize="20"/>
+            <Label Text="Chaves Registradas" HorizontalOptions="StartAndExpand" VerticalOptions="Center" TextColor="White" FontAttributes="Bold" FontSize="Medium"/>
 
             <ImageButton HeightRequest="50" WidthRequest="50" BackgroundColor="White" CornerRadius="50" Source="https://cdn-icons-png.flaticon.com/512/1611/1611154.png" Padding="10" BorderColor="Black" />
 
@@ -36,7 +36,7 @@
                 <Entry x:Name="txt_registrar" Keyboard="Default" TextColor="White" ReturnType="Next" ClearButtonVisibility="WhileEditing"/>
                 
                 <Button Text="REGISTRAR" TextColor="Black" BackgroundColor="Transparent" WidthRequest="20" HeightRequest="20" Clicked="Button_Clicked"/>
-                
+            
             </StackLayout>
 
         </Frame>
